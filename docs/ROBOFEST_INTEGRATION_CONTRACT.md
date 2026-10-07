@@ -161,26 +161,38 @@ Blocked until the auth boundary and server-to-server connection are resolved, an
 - **Senior Authentication:** **NOT IMPLEMENTED.** Audited the Senior codebase; no existing user, session, or authentication architecture exists.
 - **Gateway:** **NOT IMPLEMENTED.** Blocked pending Senior authentication to prevent an open proxy.
 
-## 8. Senior Authentication Architecture Audit
-*(AUDIT ONLY — NOT IMPLEMENTED)*
+## 8. Senior Authentication Architecture Audit (REVISED FOR PRESENTATION MODE)
+*(AUDIT & ARCHITECTURE DESIGN)*
 
 ### Current State
-The Senior application currently has **zero** authentication, authorization, or user identity architecture.
-- **Identity Model:** No users exist (Option A).
-- **Database:** Mongoose models exist for Ships, Parts, Sensors, etc., but there is no User or Account model.
-- **Frontend:** All React routes in App.jsx are fully public. No ProtectedRoute or login contexts exist.
-- **Backend:** The Express server.js and all API routers lack authentication middleware. Any anonymous user can read/write the entire MongoDB database.
-- **Deployment:** ercel.json configures the frontend and backend to share the **same origin** in production, which makes httpOnly cookies practical and secure.
+The Senior application currently has zero authentication. All endpoints and frontend routes are public.
 
-### Recommended Approach
-**Minimal First-Party Session (JWT in httpOnly Cookie)**
-Since no authentication exists and hardcoded credentials are insecure, we must build the smallest secure boundary:
-1. **Database:** Add a User Mongoose model with crypt password hashing.
-2. **Backend:** Implement POST /api/auth/login to issue a signed JWT inside an httpOnly cookie.
-3. **Middleware:** Add a equireAuth Express middleware to protect /api/operations/stream and other sensitive routes.
-4. **Frontend:** Add a basic Login page and protect the dashboard routes in App.jsx.
+### Change of Direction: Zero-Friction Presentation UI
+To ensure the RoboFest demonstration is immediate, professional, and frictionless:
+1. **No Login System:** We will **NOT** build a user identity system, email/password login, or authentication screen.
+2. **Direct Access:** The presenter must be able to navigate to /operations/live immediately without typing credentials.
+3. **Protected Service Boundary:** The internal ROBOFEST_SERVICE_TOKEN machine-to-machine authentication remains strictly enforced.
+
+### Recommended Architecture: Fixed-Target Presentation Gateway
+To make the Live Operations route directly accessible while preventing the backend from becoming a generic open proxy:
+
+1. **Frontend:**
+   - /operations/live remains a public React route.
+   - It connects via EventSource directly to the Senior backend: /api/operations/stream.
+
+2. **Backend Gateway (/api/operations/stream):**
+   - Remains a public endpoint without session verification.
+   - **Protection Mechanism:** It is strictly hardcoded to act as a **fixed-target proxy**. It will ONLY forward GET requests to process.env.ROBOFEST_URL + '/api/realtime'.
+   - It will **NOT** accept target URLs via query parameters, headers, or request bodies, eliminating the risk of Server-Side Request Forgery (SSRF) or open-proxy abuse.
+   - The Senior backend internally attaches Authorization: Bearer <ROBOFEST_SERVICE_TOKEN> from its environment variables before initiating the SSE connection to RoboFest.
+
+3. **Security Posture:**
+   - The ROBOFEST_SERVICE_TOKEN never touches the browser.
+   - The Senior Gateway can only access the RoboFest telemetry stream, nothing else.
+   - RoboFest's existing uth_token cookie mechanism remains completely unchanged.
 
 ### Remaining Work
-1. Implement the minimal Senior authentication architecture described above.
-2. Once secured, implement the /api/operations/stream Gateway proxy.
-3. Finally, execute Phase 4 (Digital Twin extraction).
+1. Implement the fixed-target /api/operations/stream Gateway proxy in the Senior backend.
+2. Update the frontend adapter to point to /api/operations/stream.
+3. Execute Phase 4 (Digital Twin extraction).
+
