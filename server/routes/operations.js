@@ -1,9 +1,73 @@
-import express from 'express';
+﻿import express from 'express';
 import CuttingOperation from '../models/CuttingOperation.js';
 import { defaultOperation } from '../config/seedData.js';
 import mongoose from 'mongoose';
 
 const router = express.Router();
+
+// GET /api/operations/stream - Fixed-Target SSE Gateway
+router.get('/stream', async (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache, no-transform');
+  res.setHeader('Connection', 'keep-alive');
+
+  const roboFestUrl = process.env.ROBOFEST_URL || 'http://localhost:3000';
+  const serviceToken = process.env.ROBOFEST_SERVICE_TOKEN;
+
+  if (!serviceToken) {
+    // Fail silently/cleanly if configuration is missing
+    return res.end();
+  }
+
+  const targetUrl = `${roboFestUrl}/api/realtime`;
+  const abortController = new AbortController();
+
+  // 9. Close RoboFest upstream when browser disconnects
+  req.on('close', () => {
+    abortController.abort();
+  });
+
+  try {
+    const upstreamRes = await fetch(targetUrl, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${serviceToken}`
+      },
+      signal: abortController.signal
+    });
+
+    if (!upstreamRes.ok) {
+      // 11. Handle 401/403/5xx cleanly without exposing secrets
+      return res.end();
+    }
+
+    if (upstreamRes.body) {
+      // Stream chunks exactly as received
+      const reader = upstreamRes.body.getReader();
+      
+      const pump = async () => {
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            res.write(value);
+          }
+        } catch (err) {
+          // fetch aborted or upstream errored
+        } finally {
+          res.end();
+        }
+      };
+      
+      pump();
+    } else {
+      res.end();
+    }
+  } catch (err) {
+    // 12. Do not expose upstream errors
+    res.end();
+  }
+});
 
 // GET current/active cutting operation
 router.get('/active', async (req, res) => {
