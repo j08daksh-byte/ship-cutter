@@ -90,7 +90,7 @@ export default function HeroSection() {
           {/* CTA Group */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/dashboard"
+              to="/operations/live"
               className="btn-primary text-sm px-8 py-3.5 w-full sm:w-auto font-semibold flex items-center justify-center gap-2 group shadow-glow"
             >
               <Activity className="w-4 h-4 text-black" />
@@ -228,3 +228,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

@@ -23,9 +23,8 @@ import PhotosPage from './pages/PhotosPage';
 import ShipsPage from './pages/ShipsPage';
 import ChatbotPage from './pages/ChatbotPage';
 import SensorsPage from './pages/SensorsPage';
-import SimulationBridgePage from './pages/SimulationBridgePage';
 import DatabaseViewerPage from './pages/DatabaseViewerPage';
-import ShipCuttingSimulationsPage from './pages/ShipCuttingSimulationsPage';
+import OperationsLivePage from './pages/OperationsLivePage';
 
 export default function App() {
   return (
@@ -44,9 +43,6 @@ export default function App() {
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardPage />} />
           <Route path="sensors" element={<SensorsPage />} />
-          <Route path="ship-cutting-simulations" element={<ShipCuttingSimulationsPage />} />
-          <Route path="simulation" element={<SimulationBridgePage />} />
-          <Route path="safety-bridge" element={<SimulationBridgePage />} />
           <Route path="database" element={<DatabaseViewerPage />} />
           <Route path="parts" element={<PartTrackingPage />} />
           <Route path="materials" element={<MaterialPage />} />
@@ -56,6 +52,11 @@ export default function App() {
           <Route path="photos" element={<PhotosPage />} />
           <Route path="ships" element={<ShipsPage />} />
           <Route path="chatbot" element={<ChatbotPage />} />
+        </Route>
+
+        {/* Unified Live Operations Route */}
+        <Route path="/operations" element={<DashboardLayout />}>
+          <Route path="live" element={<OperationsLivePage />} />
         </Route>
 
         {/* Fallback */}
