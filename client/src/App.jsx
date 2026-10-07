@@ -55,9 +55,7 @@ export default function App() {
         </Route>
 
         {/* Unified Live Operations Route */}
-        <Route path="/operations" element={<DashboardLayout />}>
-          <Route path="live" element={<OperationsLivePage />} />
-        </Route>
+        <Route path="/operations/live" element={<OperationsLivePage />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
@@ -66,3 +64,4 @@ export default function App() {
   </ErrorBoundary>
 );
 }
+

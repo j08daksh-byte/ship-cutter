@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import StatsCard from '../components/common/StatsCard';
 import LoadingSpinner from '../components/common/LoadingSpinner';
-import { TrendingUp, IndianRupee, Calendar, Percent, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { TrendingUp, IndianRupee, Calendar, Percent } from 'lucide-react';
 
 const formatINR = (val) => {
   if (!val && val !== 0) return '₹0';
@@ -177,3 +177,4 @@ export default function FeasibilityPage() {
     </div>
   );
 }
+

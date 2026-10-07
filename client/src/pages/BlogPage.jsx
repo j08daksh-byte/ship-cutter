@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
-import { Clock, ArrowRight, Search, Tag, X, FileText, Download, ShieldCheck } from 'lucide-react';
+import { Clock, ArrowRight, Search, Tag, X, Download } from 'lucide-react';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 
 export default function BlogPage() {
@@ -224,3 +224,4 @@ export default function BlogPage() {
     </div>
   );
 }
+

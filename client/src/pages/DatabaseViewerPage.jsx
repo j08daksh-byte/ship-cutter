@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
-import StatsCard from '../components/common/StatsCard';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import {
   Database,
   Server,
-  Layers,
   RefreshCw,
-  Copy,
-  CheckCircle2,
-  AlertCircle,
   FileJson,
+  Copy,
   Table,
   Check
 } from 'lucide-react';
@@ -266,3 +262,5 @@ export default function DatabaseViewerPage() {
     </div>
   );
 }
+
+

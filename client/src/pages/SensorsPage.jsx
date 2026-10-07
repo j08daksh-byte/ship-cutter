@@ -43,6 +43,26 @@ ChartJS.register(
   Filler
 );
 
+
+const chartOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    x: {
+      grid: { color: 'rgba(255, 255, 255, 0.05)' },
+      ticks: { color: '#888', font: { family: 'monospace', size: 10 } },
+    },
+    y: {
+      grid: { color: 'rgba(255, 255, 255, 0.05)' },
+      ticks: { color: '#888', font: { family: 'monospace', size: 10 } },
+    },
+  },
+  plugins: {
+    legend: {
+      labels: { color: '#ccc', font: { family: 'sans-serif', size: 11 } },
+    }
+  }
+};
 export default function SensorsPage() {
   const [telemetry, setTelemetry] = useState(null);
   const [safety, setSafety] = useState(null);
@@ -198,7 +218,7 @@ export default function SensorsPage() {
     ],
   };
 
-  const chartOptions = {
+  const chartOptions = React.useMemo(() => ({
     responsive: true,
     maintainAspectRatio: false,
     scales: {
@@ -215,8 +235,8 @@ export default function SensorsPage() {
       legend: {
         labels: { color: '#ccc', font: { family: 'sans-serif', size: 11 } },
       },
-    },
-  };
+    }
+  }), []);
 
   return (
     <div className="space-y-6">
@@ -618,3 +638,7 @@ void loop() {
     </div>
   );
 }
+
+
+
+

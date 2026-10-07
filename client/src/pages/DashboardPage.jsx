@@ -10,13 +10,7 @@ import {
   Trash2,
   Gauge,
   Activity,
-  Zap,
-  Layers,
-  Thermometer,
-  ShieldCheck,
-  AlertTriangle,
-  Play,
-  Pause
+  Pause, Play
 } from 'lucide-react';
 
 export default function DashboardPage() {
@@ -285,3 +279,5 @@ export default function DashboardPage() {
     </div>
   );
 }
+
+

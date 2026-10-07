@@ -1,33 +1,187 @@
-import React from 'react';
-import { Activity } from 'lucide-react';
+﻿import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Activity, ArrowLeft, ShieldAlert, Wifi, Battery, 
+  Cpu, Thermometer, ChevronUp, ChevronDown, Video, 
+  Settings, Terminal, Crosshair
+} from 'lucide-react';
 
 export default function OperationsLivePage() {
+  const [engineState, setEngineState] = useState('CONNECTING'); // CONNECTING, ENGINE OFFLINE, READY FOR ROBOFEST ENGINE, LIVE
+  const [bottomExpanded, setBottomExpanded] = useState(false);
+
+  // Simulate initial connection to bridge/engine
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setEngineState('READY FOR ROBOFEST ENGINE');
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="p-6 h-full flex flex-col items-center justify-center text-center">
-      <div className="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400 flex items-center justify-center text-cyan-300 mb-6 animate-pulse">
-        <Activity className="w-8 h-8" />
+    <div className="h-screen w-screen bg-black text-white flex flex-col overflow-hidden font-sans">
+      
+      {/* TOP: Compact Operational Header */}
+      <header className="h-14 border-b border-neutral-800 bg-neutral-950 flex items-center justify-between px-4 shrink-0">
+        <div className="flex items-center gap-4">
+          <Link to="/dashboard" className="text-neutral-400 hover:text-white transition-colors p-1 rounded hover:bg-neutral-800">
+            <ArrowLeft className="w-5 h-5" />
+          </Link>
+          <div className="flex items-center gap-2">
+            <Activity className="w-5 h-5 text-cyan-400" />
+            <h1 className="text-sm font-bold tracking-widest uppercase">TITAN-OS Live Operations Shell</h1>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-4 text-xs font-mono">
+          <div className="flex items-center gap-2 border border-neutral-800 px-3 py-1 rounded bg-neutral-900">
+            <span className="text-neutral-500">ENGINE STATUS:</span>
+            <span className={`font-bold ${engineState === 'READY FOR ROBOFEST ENGINE' ? 'text-emerald-400' : engineState === 'CONNECTING' ? 'text-yellow-400 animate-pulse' : 'text-neutral-400'}`}>
+              {engineState}
+            </span>
+          </div>
+          <button className="bg-red-950/40 text-red-400 border border-red-900/50 hover:bg-red-900/80 px-3 py-1 rounded flex items-center gap-2 transition-colors">
+            <ShieldAlert className="w-4 h-4" /> E-STOP
+          </button>
+        </div>
+      </header>
+
+      {/* MIDDLE SECTION: Main Workspace + Right Rail */}
+      <div className="flex-1 flex overflow-hidden">
+        
+        {/* MAIN: Primary Workspace (Digital Twin Placeholder) */}
+        <main className="flex-1 bg-neutral-900 relative border-r border-neutral-800 flex flex-col">
+          {/* Twin Mount Target */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800 to-black">
+            <div className="w-24 h-24 rounded-full border-2 border-dashed border-neutral-700 flex items-center justify-center mb-6">
+              <Crosshair className="w-10 h-10 text-neutral-600 animate-pulse" />
+            </div>
+            <h2 className="text-2xl font-bold text-neutral-300 mb-2 font-mono uppercase tracking-widest">
+              Digital Twin Mount Point
+            </h2>
+            <p className="text-neutral-500 max-w-md font-mono text-sm">
+              The RoboFest WebGL Engine will be mounted here. 
+              Currently waiting for integration phase.
+            </p>
+            {engineState === 'READY FOR ROBOFEST ENGINE' && (
+              <div className="mt-8 border border-emerald-900 bg-emerald-950/20 text-emerald-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                SHELL READY
+              </div>
+            )}
+          </div>
+          
+          {/* Workspace Overlays (Camera, View Controls) */}
+          <div className="absolute top-4 left-4 flex gap-2">
+            <button className="bg-black/50 border border-neutral-800 text-neutral-400 p-2 rounded backdrop-blur hover:text-white">
+              <Video className="w-4 h-4" />
+            </button>
+            <button className="bg-black/50 border border-neutral-800 text-neutral-400 p-2 rounded backdrop-blur hover:text-white">
+              <Settings className="w-4 h-4" />
+            </button>
+          </div>
+        </main>
+
+        {/* RIGHT: Operational Rail */}
+        <aside className="w-80 bg-neutral-950 flex flex-col overflow-y-auto shrink-0">
+          
+          {/* Rail Header */}
+          <div className="p-3 border-b border-neutral-800 bg-black sticky top-0 z-10">
+            <h3 className="text-[10px] font-bold text-neutral-500 font-mono tracking-widest uppercase">Telemetry & State</h3>
+          </div>
+
+          <div className="p-4 space-y-6">
+            
+            {/* Robot State Panel */}
+            <div className="space-y-3">
+              <h4 className="text-xs font-semibold text-neutral-400 uppercase tracking-wider flex items-center gap-2">
+                <Terminal className="w-3.5 h-3.5" /> State
+              </h4>
+              <div className="bg-black border border-neutral-800 rounded p-3 grid grid-cols-2 gap-2 text-xs font-mono">
+                <div className="text-neutral-500">MODE</div>
+                <div className="text-right text-yellow-500">STANDBY</div>
+                <div className="text-neutral-500">TARGET</div>
+                <div className="text-right text-neutral-300">N/A</div>
+              </div>
+            </div>
+
+            {/* Mission Panel */}
+            <div className="space-y-3">
+              <h4 className="text-xs font-semibold text-neutral-400 uppercase tracking-wider flex items-center gap-2">
+                <Crosshair className="w-3.5 h-3.5" /> Mission
+              </h4>
+              <div className="bg-black border border-neutral-800 rounded p-3 text-xs font-mono">
+                <div className="flex justify-between mb-2">
+                  <span className="text-neutral-500">ACTIVE PLAN</span>
+                  <span className="text-neutral-300">NONE</span>
+                </div>
+                <div className="w-full bg-neutral-900 h-1.5 rounded overflow-hidden">
+                  <div className="bg-cyan-500 h-full w-0"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Telemetry/Health Panel */}
+            <div className="space-y-3">
+              <h4 className="text-xs font-semibold text-neutral-400 uppercase tracking-wider flex items-center gap-2">
+                <Activity className="w-3.5 h-3.5" /> Hardware Health
+              </h4>
+              <div className="space-y-2">
+                <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center gap-2 text-neutral-400">
+                    <Wifi className="w-3.5 h-3.5" /> LINK
+                  </div>
+                  <span className="text-neutral-600">-- dBm</span>
+                </div>
+                <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center gap-2 text-neutral-400">
+                    <Battery className="w-3.5 h-3.5" /> POWER
+                  </div>
+                  <span className="text-neutral-600">-- V</span>
+                </div>
+                <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center gap-2 text-neutral-400">
+                    <Thermometer className="w-3.5 h-3.5" /> TEMP
+                  </div>
+                  <span className="text-neutral-600">-- °C</span>
+                </div>
+                <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center gap-2 text-neutral-400">
+                    <Cpu className="w-3.5 h-3.5" /> COMPUTE
+                  </div>
+                  <span className="text-neutral-600">-- %</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </aside>
       </div>
-      <h1 className="text-3xl font-bold text-white mb-4">Unified Live Operations</h1>
-      <p className="text-neutral-400 max-w-lg mb-8">
-        This is the future home of the unified live dashboard. It will directly integrate Command Center, Digital Twin, and Telemetry into a single seamless experience without nested iframes.
-      </p>
-      <div className="p-4 bg-neutral-900 border border-neutral-800 rounded-lg text-left max-w-xl w-full">
-        <h3 className="text-sm font-bold text-white mb-2 font-mono border-b border-neutral-800 pb-2">INTEGRATION STATUS</h3>
-        <ul className="text-sm text-neutral-400 space-y-2 font-mono">
-          <li className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            Senior Architecture Cleanup (Phase 1)
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-neutral-600"></span>
-            RoboFest Component Extraction
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-neutral-600"></span>
-            Unified Shell Implementation
-          </li>
-        </ul>
-      </div>
+
+      {/* BOTTOM: Expandable Event/Activity Area */}
+      <footer className={`border-t border-neutral-800 bg-neutral-950 flex flex-col shrink-0 transition-all duration-300 ${bottomExpanded ? 'h-48' : 'h-10'}`}>
+        <div 
+          className="h-10 px-4 flex items-center justify-between cursor-pointer hover:bg-neutral-900 transition-colors"
+          onClick={() => setBottomExpanded(!bottomExpanded)}
+        >
+          <div className="flex items-center gap-3 text-xs font-mono">
+            <span className="text-neutral-500">LATEST EVENT:</span>
+            <span className="text-neutral-300">Shell initialized. Awaiting engine mount.</span>
+          </div>
+          <button className="text-neutral-500 hover:text-white">
+            {bottomExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
+          </button>
+        </div>
+        
+        {bottomExpanded && (
+          <div className="flex-1 p-4 overflow-y-auto bg-black font-mono text-xs">
+            <div className="text-neutral-600">[SYS] Operations shell loaded successfully.</div>
+            <div className="text-neutral-600">[SYS] Layout manager active.</div>
+            <div className="text-emerald-700">[NET] Shell ready for RoboFest integration.</div>
+          </div>
+        )}
+      </footer>
+      
     </div>
   );
 }
