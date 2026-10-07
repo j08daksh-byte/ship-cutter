@@ -102,19 +102,23 @@ The Senior shell strictly monitors the SSE connection and updates its UI based o
 
 ## 5. Auth / Security Boundary
 - **RoboFest Auth:** Uses JWT stored in the `auth_token` cookie (signed via `jose` with `JWT_SECRET`).
-- **Senior Auth:** Currently has no strict auth mechanism in place for the new live route.
+- **Senior Auth:** LACKS AUTHENTICATION. The Senior backend is completely unauthenticated.
 - **Integration Rule:** The Senior shell must NEVER be given the RoboFest `JWT_SECRET`.
-- **Session Propagation:** The Senior frontend must authenticate against a central Identity Provider, which issues a token trusted by RoboFest. Direct browser SSE across origins is not safely supported without this.
+- **Session Propagation:** A centralized identity provider must be established.
 
 ## VERIFIED INTEGRATION STATUS
 
 - **SSE endpoint:** `/api/realtime` (GET, `text/event-stream`).
 - **Authentication mechanism:** Strictly reads `auth_token` HTTP-only cookie. Rejects URL token parameters.
 - **CORS status:** RoboFest does NOT emit `Access-Control-Allow-Origin` or `Access-Control-Allow-Credentials`.
-- **Payload status:** Verified. Matches Prisma DB models (`RuntimeState`, `Mission`, `TelemetryRecord`, `EventLog`).
+- **Payload status:** Verified. Matches Prisma DB models.
 - **Browser direct-connect status:** **NOT READY.** Direct browser-to-RoboFest SSE fails due to CORS policy and strict cookie authentication across origins.
-- **Server gateway requirement:** **REQUIRED.** Because the browser cannot securely send credentials cross-origin to an endpoint without CORS headers, the Senior backend must act as an SSE proxy (`/operations/stream`), holding a service token and forwarding the RoboFest stream to the Senior frontend.
-- **Current adapter status:** Corrected to point to the Senior server gateway.
-- **Digital Twin integration prerequisite:** The Digital Twin WebGL components must be extracted from the Next.js `RoboFest` app into a monorepo package before they can be mounted in the Senior Vite application.
+- **Server gateway requirement:** **REQUIRED.** Because the browser cannot securely send credentials cross-origin to an endpoint without CORS headers, the Senior backend must act as an SSE proxy (`/operations/stream`).
 
-**READY FOR PHASE 4 (Digital Twin Extraction):** YES. The boundary is verified, hardened, and the architectural prerequisites are fully documented.
+## GATEWAY STATUS: BLOCKED
+Implementation of the `/api/operations/stream` Gateway on the Senior Express server is currently BLOCKED due to:
+1. **No Senior Authentication:** The Senior Express backend currently has no global authentication mechanism. Implementing the gateway now would create an unauthenticated public tunnel directly into the RoboFest operational engine.
+2. **No RoboFest Server Auth:** RoboFest strictly expects a browser `auth_token` cookie. It does not support Service Tokens, API Keys, or `Authorization` headers. The Senior Backend cannot securely authenticate itself to RoboFest without `JWT_SECRET` (which must not be shared).
+
+## DIGITAL TWIN EXTRACTION STATUS: BLOCKED
+Blocked until the auth boundary and server-to-server connection are resolved, and a monorepo workspace is established.

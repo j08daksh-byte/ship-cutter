@@ -77,7 +77,7 @@ class RoboFestAdapter {
 
   handlePayload(rawPayload) {
     // Process actual RoboFest message types
-    const { type, payload, source, timestamp } = rawPayload;
+    const { type, payload } = rawPayload;
     
     switch (type) {
       case 'RUNTIME_STATE_UPDATED':
