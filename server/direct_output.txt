@@ -1,0 +1,1040 @@
+event: connected
+data: {"timestamp":"2026-10-07T10:30:37.232Z"}
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:01.783Z","payload":[{"id":"9300bc58-7410-46a8-9584-3f75d8df56b3","timestamp":"2026-10-07T11:54:01.672Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:01.721Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:03.807Z","payload":[{"id":"aa2f2afa-1659-4789-8a15-fbafae4a33bb","timestamp":"2026-10-07T11:54:03.740Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:03.765Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:09.745Z","payload":[{"id":"be9a4abc-7928-4ee1-882f-de056010bb11","timestamp":"2026-10-07T11:54:09.681Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:09.705Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:34.775Z","payload":[{"id":"18e8e284-392e-4f91-9e42-0fa15e0a8654","timestamp":"2026-10-07T11:54:34.693Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:34.713Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:37.761Z","payload":[{"id":"f1b37d7e-c89e-490d-8ef8-d9a3ea90532c","timestamp":"2026-10-07T11:54:37.680Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:37.697Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:45.783Z","payload":[{"id":"49233702-aef1-48a4-afcb-32c24dc47fc6","timestamp":"2026-10-07T11:54:45.699Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:45.720Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:56.781Z","payload":[{"id":"82118e76-0aff-436a-939e-88bdaa91ae57","timestamp":"2026-10-07T11:54:56.683Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:56.705Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:54:58.765Z","payload":[{"id":"1460454d-6cf8-4c32-a89c-87be8843722e","timestamp":"2026-10-07T11:54:58.698Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:54:58.718Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:07.737Z","payload":[{"id":"4eea9518-5c00-492f-b73a-59f9f129b9b4","timestamp":"2026-10-07T11:55:07.649Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:07.664Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:27.748Z","payload":[{"id":"7db0f328-5b54-4801-a972-9c7e8b478bc5","timestamp":"2026-10-07T11:55:27.660Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:27.678Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:30.773Z","payload":[{"id":"a67a3db8-91a5-4012-8574-09f7d9fa33c7","timestamp":"2026-10-07T11:55:30.705Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:30.724Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:35.705Z","payload":[{"id":"045a61b6-0513-4c80-91d4-1d405bb6e85a","timestamp":"2026-10-07T11:55:35.647Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:35.662Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:36.734Z","payload":[{"id":"ec258952-b148-40f0-8cbc-38f385aa429e","timestamp":"2026-10-07T11:55:36.652Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:36.666Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:43.790Z","payload":[{"id":"be335bfc-8bf9-4e59-a621-f37f5d9b0726","timestamp":"2026-10-07T11:55:43.696Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:43.710Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:47.784Z","payload":[{"id":"b13b0b8d-524a-442f-9b45-8bf565523c29","timestamp":"2026-10-07T11:55:47.700Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:47.717Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:55:55.743Z","payload":[{"id":"3c9935ae-b5d5-41ca-bbb8-1424e422c7c4","timestamp":"2026-10-07T11:55:55.657Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:55:55.675Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:01.712Z","payload":[{"id":"8dba7a09-3215-4718-8295-6cbe849eacb9","timestamp":"2026-10-07T11:56:01.632Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:01.645Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:05.732Z","payload":[{"id":"4d75b072-cd21-4706-ba75-1d9a5750feb1","timestamp":"2026-10-07T11:56:05.670Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:05.688Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:12.722Z","payload":[{"id":"425c726c-135c-4d81-a151-d6d549b81883","timestamp":"2026-10-07T11:56:12.631Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:12.654Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:18.729Z","payload":[{"id":"85c626d2-69b6-4118-91c2-edd997be0148","timestamp":"2026-10-07T11:56:18.625Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:18.646Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:42.687Z","payload":[{"id":"f5daff47-df1c-44fa-bc31-dc13ebaaaf78","timestamp":"2026-10-07T11:56:42.626Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:42.643Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:56.755Z","payload":[{"id":"6cd3ca8a-582f-41aa-ad37-56f3307e5bfb","timestamp":"2026-10-07T11:56:56.692Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:56.713Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:56:58.731Z","payload":[{"id":"d9619232-d670-47b2-b86b-a3101a8a2f3b","timestamp":"2026-10-07T11:56:58.664Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:56:58.686Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:57:17.780Z","payload":[{"id":"e730e481-8387-4fae-aba6-5d1b1c9a6b5a","timestamp":"2026-10-07T11:57:17.701Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:57:17.715Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:57:21.730Z","payload":[{"id":"b4c64502-7bc5-4d99-9e6f-da3826bb3742","timestamp":"2026-10-07T11:57:21.646Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:57:21.664Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:57:35.756Z","payload":[{"id":"7bcd22b2-d975-4b8e-b814-b83e564c1a9d","timestamp":"2026-10-07T11:57:35.677Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:57:35.692Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:57:39.693Z","payload":[{"id":"0ee8e1c4-d9bc-4aad-a292-679462b75d4b","timestamp":"2026-10-07T11:57:39.623Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:57:39.641Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:57:55.740Z","payload":[{"id":"41943491-7dbf-47fe-94cf-813033c55ac1","timestamp":"2026-10-07T11:57:55.650Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:57:55.672Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:57:57.788Z","payload":[{"id":"bf5252b8-45d0-4a39-9eeb-cb563209162a","timestamp":"2026-10-07T11:57:57.697Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:57:57.718Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:14.788Z","payload":[{"id":"7247a76d-59fb-4c99-aa8c-c13c150c88ee","timestamp":"2026-10-07T11:58:14.696Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:14.712Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:19.695Z","payload":[{"id":"dfa0cef5-d62f-48bd-811f-45dbb2c0a9a3","timestamp":"2026-10-07T11:58:19.625Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:19.646Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:22.753Z","payload":[{"id":"17ea32e3-f993-4dc9-a5a1-8fd31a117eb0","timestamp":"2026-10-07T11:58:22.656Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:22.684Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:24.740Z","payload":[{"id":"78f04316-b720-40e6-a023-26a9829ae13d","timestamp":"2026-10-07T11:58:24.675Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:24.694Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:35.757Z","payload":[{"id":"6739910a-97d7-4cad-bfaa-17720536e2ca","timestamp":"2026-10-07T11:58:35.659Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:35.687Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:40.775Z","payload":[{"id":"169b7bae-1660-46bf-823e-1170e71d90e2","timestamp":"2026-10-07T11:58:40.679Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:40.707Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:58:49.800Z","payload":[{"id":"78e6fbd1-b77d-407b-838e-00d1ce2d78fb","timestamp":"2026-10-07T11:58:49.704Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:58:49.728Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:59:05.817Z","payload":[{"id":"182f09c2-a299-474e-8d5e-64cb5f9a2b03","timestamp":"2026-10-07T11:59:05.698Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:59:05.729Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:59:25.728Z","payload":[{"id":"dcf956e9-d75b-48eb-9fe0-a45e501f3d4e","timestamp":"2026-10-07T11:59:25.662Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:59:25.681Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T11:59:45.778Z","payload":[{"id":"49f99011-2498-4b0a-99df-828ac5b6eae8","timestamp":"2026-10-07T11:59:45.692Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T11:59:45.708Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:00:00.722Z","payload":[{"id":"96bbcdf2-741c-4eb5-b4ec-449aba2465c0","timestamp":"2026-10-07T12:00:00.632Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:00:00.650Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:00:04.771Z","payload":[{"id":"d4dd3c19-55d5-4023-8c64-5a95fba1b029","timestamp":"2026-10-07T12:00:04.681Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:00:04.698Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:00:11.778Z","payload":[{"id":"6b8ca2e3-e7db-474c-8607-8e560eed451e","timestamp":"2026-10-07T12:00:11.693Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:00:11.707Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:00:25.784Z","payload":[{"id":"fb381243-c33d-4628-b1d8-9bcc0a12fb20","timestamp":"2026-10-07T12:00:25.700Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:00:25.729Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:00:29.789Z","payload":[{"id":"830fcef0-5d1c-4b2e-82c2-21e06f1974e6","timestamp":"2026-10-07T12:00:29.704Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:00:29.721Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:00:47.719Z","payload":[{"id":"c5c2f2db-2ad4-4756-af9e-8155038577bd","timestamp":"2026-10-07T12:00:47.625Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:00:47.643Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:01:00.770Z","payload":[{"id":"e87c4b63-f43c-4e5b-aae1-86397d51dfe8","timestamp":"2026-10-07T12:01:00.667Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:01:00.692Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:01:04.845Z","payload":[{"id":"9fa6ecda-8e34-4c5e-ba00-bd406a6a6798","timestamp":"2026-10-07T12:01:04.716Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:01:04.751Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:01:11.941Z","payload":[{"id":"55ae98f6-196d-428f-ab7b-45923d3d93c6","timestamp":"2026-10-07T12:01:11.846Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:01:11.877Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:01:44.707Z","payload":[{"id":"582095e5-d5f9-41ff-bd91-bd3c3b6647aa","timestamp":"2026-10-07T12:01:44.627Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:01:44.653Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:01:45.787Z","payload":[{"id":"a9b41d72-cdbf-473c-82fa-424eece7afa4","timestamp":"2026-10-07T12:01:45.695Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:01:45.714Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:01:57.429Z","payload":[{"id":"b6313361-ea1e-4548-b0b7-42a0a2fd55ca","timestamp":"2026-10-07T12:01:57.330Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:01:57.360Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:00.575Z","payload":[{"id":"ec697e23-6bcc-49ee-8731-cea550bdc9e6","timestamp":"2026-10-07T12:02:00.474Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:00.509Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:01.772Z","payload":[{"id":"76723fea-df39-488a-bc87-dc0b54587f94","timestamp":"2026-10-07T12:02:01.683Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:01.700Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:12.819Z","payload":[{"id":"c3a1a961-5940-4a6b-9af3-5423d1d65c95","timestamp":"2026-10-07T12:02:12.693Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:12.727Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:24.740Z","payload":[{"id":"d573f551-cf10-485a-8da2-a9947faeadf0","timestamp":"2026-10-07T12:02:24.664Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:24.681Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:44.027Z","payload":[{"id":"20ca69a8-da05-4bbf-b8eb-6b180a33f370","timestamp":"2026-10-07T12:02:43.916Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:43.950Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:47.750Z","payload":[{"id":"1e50065e-6f89-4450-918d-170f6a348f9b","timestamp":"2026-10-07T12:02:47.571Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:47.627Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:02:52.773Z","payload":[{"id":"3f606b4e-27e1-432e-9fbd-1b2e007a09ac","timestamp":"2026-10-07T12:02:52.580Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:02:52.639Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:06.151Z","payload":[{"id":"90aac410-526b-4e27-8ae6-dc8383374aea","timestamp":"2026-10-07T12:03:06.030Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:06.057Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:09.700Z","payload":[{"id":"226936e2-c539-49e8-81e4-37ad82c086ea","timestamp":"2026-10-07T12:03:09.587Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:09.617Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:10.742Z","payload":[{"id":"09016d86-3b26-49cc-a030-7bcfe166c2db","timestamp":"2026-10-07T12:03:10.592Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:10.626Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:13.701Z","payload":[{"id":"ef91909c-1ea6-499a-b3ce-83c15a4f77c3","timestamp":"2026-10-07T12:03:13.578Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:13.619Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:16.680Z","payload":[{"id":"3780cf2d-1da7-4682-98a7-180a24ad1936","timestamp":"2026-10-07T12:03:16.582Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:16.609Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:19.828Z","payload":[{"id":"e21d561d-4ebd-4d75-8d90-111c0e5333cf","timestamp":"2026-10-07T12:03:19.737Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:19.760Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:25.754Z","payload":[{"id":"a17f3e2f-5618-47a8-9e32-25fb9b1084c2","timestamp":"2026-10-07T12:03:25.663Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:25.690Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:31.698Z","payload":[{"id":"95471c4c-8b5f-404c-bb06-dea10e8c07b2","timestamp":"2026-10-07T12:03:31.582Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:31.614Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:03:32.709Z","payload":[{"id":"ea1fbb4d-138b-4b25-87e3-f7e9e4dfeff9","timestamp":"2026-10-07T12:03:32.617Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:03:32.634Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:04:06.755Z","payload":[{"id":"e6c8f38b-d221-4468-a372-c0533c756247","timestamp":"2026-10-07T12:04:06.669Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:04:06.685Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:04:08.746Z","payload":[{"id":"85fca8f2-8918-4c73-b195-f96bc3e3ad23","timestamp":"2026-10-07T12:04:08.662Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:04:08.677Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:04:11.747Z","payload":[{"id":"8d87ddba-2b13-41ab-a1f9-fde3aa738a91","timestamp":"2026-10-07T12:04:11.679Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:04:11.699Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:04:15.858Z","payload":[{"id":"f08c0480-de81-4640-9462-ddcc1c9913f5","timestamp":"2026-10-07T12:04:15.671Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:04:15.688Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:04:33.720Z","payload":[{"id":"298fe949-cf1e-42eb-a26c-4319a12777af","timestamp":"2026-10-07T12:04:33.654Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:04:33.675Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:04:59.729Z","payload":[{"id":"a0ddb112-7027-4537-8778-57d417e1e97d","timestamp":"2026-10-07T12:04:59.637Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:04:59.658Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:05:03.723Z","payload":[{"id":"afde94a2-5ac4-4745-b9f4-f9bcfe7b3135","timestamp":"2026-10-07T12:05:03.657Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:05:03.673Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:05:25.686Z","payload":[{"id":"471c3586-49db-4a98-aa4e-e4e065031666","timestamp":"2026-10-07T12:05:25.584Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:05:25.602Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:05:31.771Z","payload":[{"id":"8683b168-0469-46fe-b4ec-975095e29466","timestamp":"2026-10-07T12:05:31.672Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:05:31.697Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:05:34.747Z","payload":[{"id":"9adcbad9-7dfb-4268-9920-c982a9077999","timestamp":"2026-10-07T12:05:34.656Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:05:34.672Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:06:05.809Z","payload":[{"id":"f50c2ead-9c4b-4ef6-afc5-51496f8e2c51","timestamp":"2026-10-07T12:06:05.695Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:06:05.732Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:06:21.762Z","payload":[{"id":"a251bbfd-e68f-42a8-b8b0-f607cb190662","timestamp":"2026-10-07T12:06:21.688Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:06:21.714Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:06:31.778Z","payload":[{"id":"7cc12aaf-8dbf-4002-af51-44d2a3d4bffd","timestamp":"2026-10-07T12:06:31.695Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:06:31.711Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:06:34.750Z","payload":[{"id":"96089de3-f661-40d3-98f5-619136fef939","timestamp":"2026-10-07T12:06:34.659Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:06:34.674Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:06:47.790Z","payload":[{"id":"361edced-6a77-4886-ad6f-6abc3a0a3238","timestamp":"2026-10-07T12:06:47.703Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:06:47.720Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:06:58.760Z","payload":[{"id":"bfa0707e-eed4-4831-a424-fb2bc91c86af","timestamp":"2026-10-07T12:06:58.672Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:06:58.686Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:05.772Z","payload":[{"id":"d44e326c-0e17-4e4a-8f92-b3b01ea6e079","timestamp":"2026-10-07T12:07:05.687Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:05.701Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:11.777Z","payload":[{"id":"9ff4477e-1ee0-481e-8bf1-c369f1b50ef0","timestamp":"2026-10-07T12:07:11.688Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:11.707Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:21.738Z","payload":[{"id":"3a60e510-1c72-4ff6-9575-2a2bbe55e5c2","timestamp":"2026-10-07T12:07:21.667Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:21.684Z"}]}
+
+:
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:41.739Z","payload":[{"id":"8d910114-26db-46ee-9981-ae0c202dcd9d","timestamp":"2026-10-07T12:07:41.651Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:41.670Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:47.715Z","payload":[{"id":"0499f619-5cc3-4f7b-8f56-29c0f6156988","timestamp":"2026-10-07T12:07:47.624Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:47.637Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:50.763Z","payload":[{"id":"34acdb99-65d8-43dd-b0fc-fc5b4d1eeb59","timestamp":"2026-10-07T12:07:50.674Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:50.689Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:53.766Z","payload":[{"id":"88eaf5a0-f18e-4008-8e97-0c93fd35f78d","timestamp":"2026-10-07T12:07:53.676Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:53.692Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:07:56.728Z","payload":[{"id":"f3ce3ca8-0be4-4ba3-9208-6eaf4b5daed5","timestamp":"2026-10-07T12:07:56.629Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:07:56.652Z"}]}
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:08:09.730Z","payload":[{"id":"7e77a53b-f34d-45be-878b-8024cd3c9386","timestamp":"2026-10-07T12:08:09.622Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:08:09.648Z"}]}
+
+:
+
+event: message
+data: {"type":"TELEMETRY_UPDATED","source":"API","timestamp":"2026-10-07T12:08:13.931Z","payload":[{"id":"d4269e36-cd3e-4b05-af63-f08ec688a5b1","timestamp":"2026-10-07T12:08:13.838Z","robotId":"ROBO-1","source":"SIMULATOR","mode":"SIMULATED","powerVoltage":220,"powerCurrent":3.5,"imuAccelX":0,"imuAccelY":-9.81,"imuAccelZ":0,"imuGyroX":0,"imuGyroY":0,"imuGyroZ":0,"imuTiltAngle":2.4,"motorCurrentLeft":4.2,"motorCurrentRight":4.1,"motorTempLeft":42,"motorTempRight":43,"electromagnetCurrent":5.2,"electromagnetEnabled":false,"armExtensionY":0,"armExtensionX":0,"vibrationLevel":0.05,"torchStatus":"OFF","oxyPressurePsi":124,"oxyFlowRate":0,"acePressurePsi":14,"aceFlowRate":0,"envTemperatureC":22,"envHumidity":45,"envAtmosphericPressure":1013,"envWindSpeed":12,"envRain":false,"envVisibility":"CLEAR","envO2Percentage":20.9,"envCoPpm":0,"envCo2Ppm":400,"envCombustibleGasLel":0,"positionX":0,"positionY":0,"positionZ":0,"overallHealth":"GOOD","createdAt":"2026-10-07T12:08:13.855Z"}]}
+

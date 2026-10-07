@@ -111,7 +111,7 @@ export default function OperationsLivePage() {
   }, []);
 
   return (
-    <div className="h-screen w-screen bg-black text-white flex flex-col overflow-hidden font-sans">
+    <div className="h-full w-full bg-black text-white flex flex-col overflow-hidden font-sans">
       
       {/* TOP: Compact Operational Header */}
       <header className="h-14 border-b border-neutral-800 bg-neutral-950 flex items-center justify-between px-4 shrink-0">
@@ -150,7 +150,7 @@ export default function OperationsLivePage() {
           {/* Twin Mount Target */}
           <div className="absolute inset-0 flex flex-col items-center justify-center p-0 text-center bg-black">
             {twinState ? (
-              <TwinProvider state={twinState}>
+              <TwinProvider state={twinState} assetBaseUrl="/twin-assets">
                 <div className="w-full h-full"><SharedDigitalTwin /></div>
               </TwinProvider>
             ) : (
@@ -291,3 +291,5 @@ export default function OperationsLivePage() {
     </div>
   );
 }
+
+

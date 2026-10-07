@@ -125,7 +125,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            to="/dashboard"
+            to="/operations/live"
             className="btn-primary group flex items-center gap-1.5 shadow-glow-sm"
           >
             <span>Live Operations</span>
@@ -162,7 +162,7 @@ export default function Navbar() {
               <span>Titan-X1 Robotic Unit Active</span>
             </div>
             <Link
-              to="/dashboard"
+              to="/operations/live"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary w-full text-center"
             >
@@ -174,3 +174,4 @@ export default function Navbar() {
     </header>
   );
 }
+
