@@ -6,6 +6,7 @@ import {
   Settings, Terminal, Crosshair
 } from 'lucide-react';
 import { robofestAdapter } from '../services/robofestAdapter';
+import { TwinProvider, DigitalTwin as SharedDigitalTwin } from '@titan/digital-twin';
 
 export default function OperationsLivePage() {
   const [connectionState, setConnectionState] = useState('DISCONNECTED'); // DISCONNECTED, CONNECTING, CONNECTED, DEGRADED, ERROR
@@ -17,6 +18,63 @@ export default function OperationsLivePage() {
   const [events, setEvents] = useState([
     { timestamp: new Date(), message: 'Shell initialized. Adapter configured for Gateway.', type: 'sys' }
   ]);
+
+
+    const twinState = robotState ? {
+    position: robotState.position || { x: 0, y: 0, z: 0 },
+    arm: {
+      yPosition: robotState.arm?.yPosition || 0,
+      xExtension: robotState.arm?.xExtension || 0
+    },
+    torch: {
+      enabled: robotState.torch?.enabled || false
+    },
+    electromagnet: {
+      enabled: robotState.electromagnet?.enabled || false
+    },
+    trackOffset: robotState.trackOffset || 0,
+    fifthCableLength: robotState.fifthCableLength || 0,
+    cameraTarget: robotState.cameraTarget || 'robot',
+    cameraFocusTrigger: robotState.cameraFocusTrigger || 0,
+    followMode: robotState.followMode || false,
+    uiMode: robotState.uiMode === 'debug' ? 'debug' : 'presentation',
+    xRayMode: robotState.xRayMode || false,
+    activeCutPath: robotState.activeCutPath || [],
+    completedCuts: (robotState.completedCuts || []).map(cut => ({
+      id: cut.id || 'unknown',
+      timestamp: typeof cut.timestamp === 'string' ? new Date(cut.timestamp).getTime() : (cut.timestamp || 0),
+      path: cut.path || [],
+      isClosed: !!cut.isClosed
+    })),
+    testShipVisibility: {
+      showStructuralLines: false,
+      showSurfaceDebug: false,
+      showSurfaceNormals: false,
+      showSurfaceTangents: false,
+      showRobotProxies: false
+    }
+  } : {
+    position: { x: 0, y: 0, z: 0 },
+    arm: { yPosition: 0, xExtension: 0 },
+    torch: { enabled: false },
+    electromagnet: { enabled: false },
+    trackOffset: 0,
+    fifthCableLength: 0,
+    cameraTarget: 'robot',
+    cameraFocusTrigger: 0,
+    followMode: false,
+    uiMode: 'presentation',
+    xRayMode: false,
+    activeCutPath: [],
+    completedCuts: [],
+    testShipVisibility: {
+      showStructuralLines: false,
+      showSurfaceDebug: false,
+      showSurfaceNormals: false,
+      showSurfaceTangents: false,
+      showRobotProxies: false
+    }
+  };
 
   // Connect to RoboFest Integration Adapter
   useEffect(() => {
@@ -90,26 +148,27 @@ export default function OperationsLivePage() {
         {/* MAIN: Primary Workspace (Digital Twin Placeholder) */}
         <main className="flex-1 bg-neutral-900 relative border-r border-neutral-800 flex flex-col">
           {/* Twin Mount Target */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800 to-black">
-            <div className="w-24 h-24 rounded-full border-2 border-dashed border-neutral-700 flex items-center justify-center mb-6">
-              <Crosshair className="w-10 h-10 text-neutral-600 animate-pulse" />
-            </div>
-            <h2 className="text-2xl font-bold text-neutral-300 mb-2 font-mono uppercase tracking-widest">
-              Digital Twin Mount Point
-            </h2>
-            <p className="text-neutral-500 max-w-md font-mono text-sm">
-              The RoboFest WebGL Engine will be mounted here. 
-              Currently waiting for Phase 4 monorepo extraction.
-            </p>
-            {connectionState === 'CONNECTED' && (
-              <div className="mt-8 border border-emerald-900 bg-emerald-950/20 text-emerald-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                ADAPTER CONNECTED - WAITING FOR TWIN BUNDLE
-              </div>
-            )}
-            {connectionState === 'ERROR' && (
-              <div className="mt-8 border border-red-900 bg-red-950/20 text-red-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
-                SSE GATEWAY CONNECTION REFUSED
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-0 text-center bg-black">
+            {twinState ? (
+              <TwinProvider state={twinState}>
+                <div className="w-full h-full"><SharedDigitalTwin /></div>
+              </TwinProvider>
+            ) : (
+              <div className="flex flex-col items-center justify-center p-8 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800 to-black w-full h-full">
+                <div className="w-24 h-24 rounded-full border-2 border-dashed border-neutral-700 flex items-center justify-center mb-6">
+                  <Crosshair className="w-10 h-10 text-neutral-600 animate-pulse" />
+                </div>
+                <h2 className="text-2xl font-bold text-neutral-300 mb-2 font-mono uppercase tracking-widest">
+                  Waiting for Twin Data
+                </h2>
+                <p className="text-neutral-500 max-w-md font-mono text-sm">
+                  RoboFest WebGL Engine is mounted. Waiting for state sync from adapter...
+                </p>
+                {connectionState === 'ERROR' && (
+                  <div className="mt-8 border border-red-900 bg-red-950/20 text-red-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
+                    SSE GATEWAY CONNECTION REFUSED
+                  </div>
+                )}
               </div>
             )}
           </div>
