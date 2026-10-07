@@ -10,19 +10,18 @@ router.get('/stream', async (req, res) => {
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache, no-transform');
   res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders(); // Ensure headers are sent immediately
 
   const roboFestUrl = process.env.ROBOFEST_URL || 'http://localhost:3000';
   const serviceToken = process.env.ROBOFEST_SERVICE_TOKEN;
 
   if (!serviceToken) {
-    // Fail silently/cleanly if configuration is missing
     return res.end();
   }
 
   const targetUrl = `${roboFestUrl}/api/realtime`;
   const abortController = new AbortController();
 
-  // 9. Close RoboFest upstream when browser disconnects
   req.on('close', () => {
     abortController.abort();
   });
@@ -37,12 +36,10 @@ router.get('/stream', async (req, res) => {
     });
 
     if (!upstreamRes.ok) {
-      // 11. Handle 401/403/5xx cleanly without exposing secrets
       return res.end();
     }
 
     if (upstreamRes.body) {
-      // Stream chunks exactly as received
       const reader = upstreamRes.body.getReader();
       
       const pump = async () => {
@@ -50,7 +47,13 @@ router.get('/stream', async (req, res) => {
           while (true) {
             const { done, value } = await reader.read();
             if (done) break;
-            res.write(value);
+            
+            // Write directly to the socket, bypassing any Express buffering
+            res.write(Buffer.from(value));
+            
+            if (typeof res.flush === 'function') {
+              res.flush();
+            }
           }
         } catch (err) {
           // fetch aborted or upstream errored
@@ -64,7 +67,6 @@ router.get('/stream', async (req, res) => {
       res.end();
     }
   } catch (err) {
-    // 12. Do not expose upstream errors
     res.end();
   }
 });
