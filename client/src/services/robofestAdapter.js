@@ -1,17 +1,19 @@
 ﻿/**
- * ROBOFEST INTEGRATION ADAPTER
+ * SENIOR OPERATIONS ADAPTER
  * 
  * Provides a clean boundary for communicating with the RoboFest operational engine.
- * Maps RoboFest's internal SSE realtime stream to the Senior /operations/live UI.
+ * Currently configured for the SERVER-SIDE GATEWAY architecture because direct 
+ * Cross-Origin SSE to RoboFest is not supported due to CORS and Cookie constraints.
  */
 
-const ROBOFEST_ENGINE_URL = import.meta.env.VITE_ROBOFEST_ENGINE_URL || 'http://localhost:3000';
+// We will point to the Senior Server API (which will proxy to RoboFest)
+const SENIOR_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 class RoboFestAdapter {
   constructor() {
     this.eventSource = null;
     this.listeners = new Set();
-    this.connectionState = 'DISCONNECTED'; // DISCONNECTED, CONNECTING, CONNECTED, ERROR
+    this.connectionState = 'DISCONNECTED'; // DISCONNECTED, CONNECTING, CONNECTED, DEGRADED, ERROR
     
     this.state = {
       robot: null,
@@ -22,19 +24,19 @@ class RoboFestAdapter {
     };
   }
 
-  connect(token) {
+  connect() {
     if (this.connectionState === 'CONNECTING' || this.connectionState === 'CONNECTED') {
       return;
     }
 
     this.updateConnectionState('CONNECTING');
     
-    // Auth token must be provided or passed via credentials if proxying
-    // Currently assuming token is set as a cookie or passed in URL for EventSource
-    const url = new URL(`${ROBOFEST_ENGINE_URL}/api/realtime`);
-    if (token) url.searchParams.append('token', token);
+    // The browser connects to its SAME-ORIGIN Senior backend.
+    // The Senior backend is responsible for maintaining the auth token and proxying the RoboFest SSE.
+    const url = new URL(`${SENIOR_API_URL}/operations/stream`);
 
     try {
+      // withCredentials ensures the Senior session cookie is sent to the Senior backend.
       this.eventSource = new EventSource(url.toString(), { withCredentials: true });
 
       this.eventSource.addEventListener('connected', (e) => {
@@ -43,8 +45,8 @@ class RoboFestAdapter {
 
       this.eventSource.addEventListener('message', (e) => {
         try {
-          const payload = JSON.parse(e.data);
-          this.handlePayload(payload);
+          const rawPayload = JSON.parse(e.data);
+          this.handlePayload(rawPayload);
         } catch (err) {
           console.error('RoboFest Adapter: Failed to parse message payload', err);
         }
@@ -53,6 +55,7 @@ class RoboFestAdapter {
       this.eventSource.onerror = (e) => {
         this.updateConnectionState('ERROR');
         this.disconnect();
+        // Basic backoff could be implemented here
       };
     } catch (err) {
       this.updateConnectionState('ERROR');
@@ -72,43 +75,37 @@ class RoboFestAdapter {
     this.notifyListeners({ type: 'CONNECTION_STATE', payload: state });
   }
 
-  handlePayload(payload) {
-    // Process different message types based on the RoboFest data contract
-    const { type, data } = payload;
+  handlePayload(rawPayload) {
+    // Process actual RoboFest message types
+    const { type, payload, source, timestamp } = rawPayload;
     
     switch (type) {
-      case 'ROBOT_STATE':
-        this.state.robot = data;
+      case 'RUNTIME_STATE_UPDATED':
+        this.state.robot = payload;
         break;
-      case 'MISSION_STATE':
-        this.state.mission = data;
+      case 'MISSION_UPDATED':
+        this.state.mission = payload;
         break;
-      case 'SAFETY_STATE':
-        this.state.safety = data;
+      case 'TELEMETRY_UPDATED':
+        this.state.telemetry = payload;
         break;
-      case 'TELEMETRY':
-        this.state.telemetry = data;
-        break;
-      case 'ROBOT_HEALTH':
-        this.state.health = data;
-        break;
-      case 'EVENT':
-        // pass through to listeners
+      case 'EVENT_CREATED':
+        // pass through
         break;
       default:
-        // Generic update
         break;
     }
     
-    this.notifyListeners(payload);
+    this.notifyListeners(rawPayload);
   }
 
   subscribe(callback) {
     this.listeners.add(callback);
     // Send immediate state sync
     callback({ type: 'CONNECTION_STATE', payload: this.connectionState });
-    if (this.state.robot) callback({ type: 'ROBOT_STATE', payload: this.state.robot });
-    if (this.state.safety) callback({ type: 'SAFETY_STATE', payload: this.state.safety });
+    if (this.state.robot) callback({ type: 'RUNTIME_STATE_UPDATED', payload: this.state.robot });
+    if (this.state.mission) callback({ type: 'MISSION_UPDATED', payload: this.state.mission });
+    if (this.state.telemetry) callback({ type: 'TELEMETRY_UPDATED', payload: this.state.telemetry });
     
     return () => this.listeners.delete(callback);
   }

@@ -8,14 +8,14 @@ import {
 import { robofestAdapter } from '../services/robofestAdapter';
 
 export default function OperationsLivePage() {
-  const [connectionState, setConnectionState] = useState('DISCONNECTED'); // DISCONNECTED, CONNECTING, CONNECTED, ERROR
-  const [engineState, setEngineState] = useState('OFFLINE'); // OFFLINE, READY FOR ROBOFEST ENGINE, LIVE
+  const [connectionState, setConnectionState] = useState('DISCONNECTED'); // DISCONNECTED, CONNECTING, CONNECTED, DEGRADED, ERROR
   const [bottomExpanded, setBottomExpanded] = useState(false);
-  const [robotState, setRobotState] = useState(null);
-  const [safetyState, setSafetyState] = useState(null);
-  const [telemetry, setTelemetry] = useState(null);
-  const [events, setEvents] = useState(() => [
-    { timestamp: new Date(), message: 'Shell initialized. Awaiting engine mount.', type: 'sys' }
+  
+  const [robotState, setRobotState] = useState(null); // Maps to RUNTIME_STATE_UPDATED
+  const [missionState, setMissionState] = useState(null); // Maps to MISSION_UPDATED
+  const [telemetry, setTelemetry] = useState(null); // Maps to TELEMETRY_UPDATED
+  const [events, setEvents] = useState([
+    { timestamp: new Date(), message: 'Shell initialized. Adapter configured for Gateway.', type: 'sys' }
   ]);
 
   // Connect to RoboFest Integration Adapter
@@ -26,20 +26,20 @@ export default function OperationsLivePage() {
       switch (event.type) {
         case 'CONNECTION_STATE':
           setConnectionState(event.payload);
-          if (event.payload === 'CONNECTED') setEngineState('READY FOR ROBOFEST ENGINE');
-          else if (event.payload === 'ERROR') setEngineState('OFFLINE');
           break;
-        case 'ROBOT_STATE':
+        case 'RUNTIME_STATE_UPDATED':
           setRobotState(event.payload);
           break;
-        case 'SAFETY_STATE':
-          setSafetyState(event.payload);
+        case 'MISSION_UPDATED':
+          setMissionState(event.payload);
           break;
-        case 'TELEMETRY':
+        case 'TELEMETRY_UPDATED':
           setTelemetry(event.payload);
           break;
-        case 'EVENT':
-          setEvents(prev => [event.payload, ...prev].slice(0, 50));
+        case 'EVENT_CREATED':
+          if (event.payload) {
+            setEvents(prev => [event.payload, ...prev].slice(0, 50));
+          }
           break;
         default:
           break;
@@ -101,15 +101,15 @@ export default function OperationsLivePage() {
               The RoboFest WebGL Engine will be mounted here. 
               Currently waiting for Phase 4 monorepo extraction.
             </p>
-            {engineState === 'READY FOR ROBOFEST ENGINE' && (
+            {connectionState === 'CONNECTED' && (
               <div className="mt-8 border border-emerald-900 bg-emerald-950/20 text-emerald-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                SHELL READY - WAITING FOR TWIN BUNDLE
+                ADAPTER CONNECTED - WAITING FOR TWIN BUNDLE
               </div>
             )}
             {connectionState === 'ERROR' && (
               <div className="mt-8 border border-red-900 bg-red-950/20 text-red-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
-                ROBOFEST OPERATIONAL ENGINE OFFLINE
+                SSE GATEWAY CONNECTION REFUSED
               </div>
             )}
           </div>
@@ -142,11 +142,11 @@ export default function OperationsLivePage() {
               </h4>
               <div className="bg-black border border-neutral-800 rounded p-3 grid grid-cols-2 gap-2 text-xs font-mono">
                 <div className="text-neutral-500">MODE</div>
-                <div className={`text-right ${robotState?.mode ? 'text-emerald-400' : 'text-neutral-600'}`}>
-                  {robotState?.mode || 'UNAVAILABLE'}
+                <div className={`text-right ${robotState?.systemMode ? 'text-emerald-400' : 'text-neutral-600'}`}>
+                  {robotState?.systemMode || 'UNAVAILABLE'}
                 </div>
-                <div className="text-neutral-500">TARGET</div>
-                <div className="text-right text-neutral-600">{robotState?.target || 'N/A'}</div>
+                <div className="text-neutral-500">E-STOP</div>
+                <div className="text-right text-neutral-600">{robotState?.emergencyActive ? 'ACTIVE' : (robotState ? 'CLEAR' : 'UNAVAILABLE')}</div>
               </div>
             </div>
 
@@ -158,10 +158,10 @@ export default function OperationsLivePage() {
               <div className="bg-black border border-neutral-800 rounded p-3 text-xs font-mono">
                 <div className="flex justify-between mb-2">
                   <span className="text-neutral-500">ACTIVE PLAN</span>
-                  <span className="text-neutral-600">UNAVAILABLE</span>
+                  <span className="text-neutral-600">{missionState?.status || 'UNAVAILABLE'}</span>
                 </div>
                 <div className="w-full bg-neutral-900 h-1.5 rounded overflow-hidden">
-                  <div className="bg-cyan-500 h-full w-0"></div>
+                  <div className="bg-cyan-500 h-full" style={{ width: `${missionState?.progressPercentage || 0}%` }}></div>
                 </div>
               </div>
             </div>
@@ -174,27 +174,27 @@ export default function OperationsLivePage() {
               <div className="space-y-2">
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
-                    <Wifi className="w-3.5 h-3.5" /> LINK
+                    <Wifi className="w-3.5 h-3.5" /> SOURCE
                   </div>
-                  <span className="text-neutral-600">{telemetry?.link || '--'} dBm</span>
+                  <span className="text-neutral-600">{telemetry?.mode || 'UNAVAILABLE'}</span>
                 </div>
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
                     <Battery className="w-3.5 h-3.5" /> POWER
                   </div>
-                  <span className="text-neutral-600">{telemetry?.power || '--'} V</span>
+                  <span className="text-neutral-600">{telemetry?.powerVoltage ? `${telemetry.powerVoltage}V` : 'UNAVAILABLE'}</span>
                 </div>
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
-                    <Thermometer className="w-3.5 h-3.5" /> TEMP
+                    <Thermometer className="w-3.5 h-3.5" /> M-TEMP
                   </div>
-                  <span className="text-neutral-600">{telemetry?.temp || '--'} °C</span>
+                  <span className="text-neutral-600">{telemetry?.motorTempLeft ? `${telemetry.motorTempLeft}°C` : 'UNAVAILABLE'}</span>
                 </div>
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
-                    <Cpu className="w-3.5 h-3.5" /> COMPUTE
+                    <ShieldAlert className="w-3.5 h-3.5" /> HEALTH
                   </div>
-                  <span className="text-neutral-600">{telemetry?.cpu || '--'} %</span>
+                  <span className="text-neutral-600">{telemetry?.overallHealth || 'UNAVAILABLE'}</span>
                 </div>
               </div>
             </div>
@@ -221,8 +221,8 @@ export default function OperationsLivePage() {
         {bottomExpanded && (
           <div className="flex-1 p-4 overflow-y-auto bg-black font-mono text-xs">
             {events.map((ev, i) => (
-              <div key={i} className={`mb-1 ${ev.type === 'error' ? 'text-red-500' : ev.type === 'net' ? 'text-emerald-500' : 'text-neutral-500'}`}>
-                [{ev.timestamp.toLocaleTimeString()}] {ev.message}
+              <div key={i} className={`mb-1 ${ev.severity === 'ERROR' ? 'text-red-500' : 'text-neutral-500'}`}>
+                [{new Date(ev.timestamp).toLocaleTimeString()}] {ev.message}
               </div>
             ))}
           </div>
@@ -232,4 +232,3 @@ export default function OperationsLivePage() {
     </div>
   );
 }
-
