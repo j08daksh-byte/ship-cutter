@@ -62,9 +62,6 @@ interface MissionState {
   progressPercentage: number;
 }
 
-// [NOT CURRENTLY EMITTED] Emitted implicitly via RuntimeState emergencyActive
-// interface SafetyState { ... }
-
 // [ACTUAL] Emitted as `TELEMETRY_UPDATED`
 interface Telemetry {
   timestamp: string;
@@ -77,9 +74,6 @@ interface Telemetry {
   // ... other flat telemetry fields from Prisma schema
   overallHealth: string;
 }
-
-// [NOT CURRENTLY EMITTED] Handled internally in DB `ComponentHealth`
-// interface RobotHealth { ... }
 
 // [ACTUAL] Emitted as `EVENT_CREATED`
 interface Event {
@@ -105,6 +99,45 @@ The Senior shell strictly monitors the SSE connection and updates its UI based o
 - **Senior Auth:** LACKS AUTHENTICATION. The Senior backend is completely unauthenticated.
 - **Integration Rule:** The Senior shell must NEVER be given the RoboFest `JWT_SECRET`.
 - **Session Propagation:** A centralized identity provider must be established.
+
+## 6. Server-to-Server Authentication Design
+*(DESIGN ONLY — NOT IMPLEMENTED)*
+
+### Recommended Architecture: Static Service Token via Bearer Header (Option A)
+The Senior Express server will authenticate to the RoboFest Next.js server using a high-entropy static token passed via the `Authorization: Bearer <token>` header. 
+
+### Why:
+This is the smallest, secure production-appropriate boundary. Both servers operate in trusted environments. A shared secret environment variable securely identifies the Senior Gateway without requiring cryptographic JWT generation/verification for an internal machine-to-machine connection. It avoids creating complex key rotation pipelines while fully isolating the domains.
+
+### Rejected Alternatives:
+- **B. Signed Service JWT:** Unnecessarily complex for a 1-to-1 static trust.
+- **C. HMAC Request Signing:** Extreme overkill for a simple one-way SSE stream.
+- **D. Unified IdP:** Out of scope for this phase.
+- **E. Reuse existing user auth_token:** Unsafe and physically blocked by modern browsers (requires forwarding cross-origin, cross-domain cookies).
+
+### Exact Future Request Contract:
+```http
+GET /api/realtime HTTP/1.1
+Host: robofest-engine
+Authorization: Bearer <ROBOFEST_SERVICE_TOKEN>
+```
+- **Validation:** RoboFest checks the `Authorization` header. If it matches `process.env.ROBOFEST_SERVICE_TOKEN`, access is granted. Otherwise, it falls back to checking the existing `auth_token` cookie.
+- **Failure:** Returns `401 Unauthorized`.
+- **Secret Storage:** Managed entirely via `.env.local` or a secret manager. Never exposed to the frontend.
+
+### Threat Model & Mitigations
+1. **Anonymous browser calls Senior `/operations/stream`:** *Mitigation:* Senior must implement a basic auth boundary (e.g., login session) before opening the proxy stream.
+2. **Attacker obtains RoboFest service token:** *Mitigation:* Token is kept strictly in server `.env`, rotated securely, and never exposed via `VITE_` or `NEXT_PUBLIC_` variables.
+3. **Service token appears in URL:** *Mitigation:* Token is passed ONLY via the `Authorization` header.
+4. **Replay attacks:** *Mitigation:* Enforce TLS/HTTPS on all internal server-to-server traffic.
+5. **Gateway abused as open proxy:** *Mitigation:* Gateway logic is strictly hardcoded to proxy only to the `ROBOFEST_ENGINE_URL/api/realtime` route.
+6. **Token accidentally logged:** *Mitigation:* Configure Express/Morgan logging to redact the `Authorization` header.
+
+### Implementation Order
+1. Add `ROBOFEST_SERVICE_TOKEN` to RoboFest environment.
+2. Update RoboFest `/api/realtime/route.ts` to accept `Authorization: Bearer <token>` alongside the existing cookie logic.
+3. Implement basic session auth on the Senior Express server to protect the gateway endpoint.
+4. Implement `/api/operations/stream` Gateway on Senior, forwarding the SSE stream using the static Bearer token.
 
 ## VERIFIED INTEGRATION STATUS
 
