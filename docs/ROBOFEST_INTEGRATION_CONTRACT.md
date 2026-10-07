@@ -160,3 +160,27 @@ Blocked until the auth boundary and server-to-server connection are resolved, an
 - **RoboFest Service Authentication:** **IMPLEMENTED.** The /api/realtime endpoint now supports Authorization: Bearer <ROBOFEST_SERVICE_TOKEN> natively via constant-time comparison.
 - **Senior Authentication:** **NOT IMPLEMENTED.** Audited the Senior codebase; no existing user, session, or authentication architecture exists.
 - **Gateway:** **NOT IMPLEMENTED.** Blocked pending Senior authentication to prevent an open proxy.
+
+## 8. Senior Authentication Architecture Audit
+*(AUDIT ONLY — NOT IMPLEMENTED)*
+
+### Current State
+The Senior application currently has **zero** authentication, authorization, or user identity architecture.
+- **Identity Model:** No users exist (Option A).
+- **Database:** Mongoose models exist for Ships, Parts, Sensors, etc., but there is no User or Account model.
+- **Frontend:** All React routes in App.jsx are fully public. No ProtectedRoute or login contexts exist.
+- **Backend:** The Express server.js and all API routers lack authentication middleware. Any anonymous user can read/write the entire MongoDB database.
+- **Deployment:** ercel.json configures the frontend and backend to share the **same origin** in production, which makes httpOnly cookies practical and secure.
+
+### Recommended Approach
+**Minimal First-Party Session (JWT in httpOnly Cookie)**
+Since no authentication exists and hardcoded credentials are insecure, we must build the smallest secure boundary:
+1. **Database:** Add a User Mongoose model with crypt password hashing.
+2. **Backend:** Implement POST /api/auth/login to issue a signed JWT inside an httpOnly cookie.
+3. **Middleware:** Add a equireAuth Express middleware to protect /api/operations/stream and other sensitive routes.
+4. **Frontend:** Add a basic Login page and protect the dashboard routes in App.jsx.
+
+### Remaining Work
+1. Implement the minimal Senior authentication architecture described above.
+2. Once secured, implement the /api/operations/stream Gateway proxy.
+3. Finally, execute Phase 4 (Digital Twin extraction).
