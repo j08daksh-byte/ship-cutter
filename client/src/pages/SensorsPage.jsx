@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import StatsCard from '../components/common/StatsCard';
 import LoadingSpinner from '../components/common/LoadingSpinner';
@@ -144,7 +144,7 @@ export default function SensorsPage() {
     labels: tempLabels,
     datasets: [
       {
-        label: 'Adafruit IO Live Temp (°C)',
+        label: 'Adafruit IO Live Temp (Â°C)',
         data: aioTempList.length > 0 ? aioTempList.map((p) => p.value) : history.map((h) => h.temperature),
         borderColor: '#f97316',
         backgroundColor: 'rgba(249, 115, 22, 0.15)',
@@ -154,7 +154,7 @@ export default function SensorsPage() {
         pointHoverRadius: 6,
       },
       {
-        label: 'Opposite Bulkhead Wall (°C)',
+        label: 'Opposite Bulkhead Wall (Â°C)',
         data: history.map((h) => h.oppositeSideTemp),
         borderColor: '#38bdf8',
         backgroundColor: 'rgba(56, 189, 248, 0.05)',
@@ -198,7 +198,7 @@ export default function SensorsPage() {
     labels: thermalLabels,
     datasets: [
       {
-        label: 'Thermal Camera Void Temp (°C)',
+        label: 'Thermal Camera Void Temp (Â°C)',
         data: aioThermalList.length > 0 ? aioThermalList.map((p) => p.value) : history.map((h) => h.oppositeSideTemp),
         borderColor: '#a855f7',
         backgroundColor: 'rgba(168, 85, 247, 0.1)',
@@ -217,26 +217,6 @@ export default function SensorsPage() {
       },
     ],
   };
-
-  const chartOptions = React.useMemo(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-        ticks: { color: '#888', font: { family: 'monospace', size: 10 } },
-      },
-      y: {
-        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-        ticks: { color: '#888', font: { family: 'monospace', size: 10 } },
-      },
-    },
-    plugins: {
-      legend: {
-        labels: { color: '#ccc', font: { family: 'sans-serif', size: 11 } },
-      },
-    }
-  }), []);
 
   return (
     <div className="space-y-6">
@@ -371,7 +351,7 @@ export default function SensorsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatsCard
           title="Adafruit IO Temperature"
-          value={`${telemetry?.temperature || 25.6}°C`}
+          value={`${telemetry?.temperature || 25.6}Â°C`}
           unit="Live Feed: temperature"
           icon={Thermometer}
           change={telemetry?.temperature > 50 ? 'HIGH TEMP' : 'Optimal Temp'}
@@ -389,8 +369,8 @@ export default function SensorsPage() {
 
         <StatsCard
           title="Thermal Camera Hull Temp"
-          value={`${telemetry?.oppositeSideTemp || 28.5}°C`}
-          unit={`Max Safe: ${safety?.thresholds?.maxOppositeTemp || 50}°C`}
+          value={`${telemetry?.oppositeSideTemp || 28.5}Â°C`}
+          unit={`Max Safe: ${safety?.thresholds?.maxOppositeTemp || 50}Â°C`}
           icon={Thermometer}
           change={telemetry?.oppositeSideTemp > 50 ? 'CRITICAL HEAT' : 'Safe Wall Temp'}
           changeType={telemetry?.oppositeSideTemp > 50 ? 'negative' : 'positive'}
@@ -415,7 +395,7 @@ export default function SensorsPage() {
             <div className="flex items-center gap-2">
               <Thermometer className="w-4 h-4 text-orange-400" />
               <h3 className="text-xs font-mono font-bold text-white uppercase">
-                1. Temperature Sensor (°C)
+                1. Temperature Sensor (Â°C)
               </h3>
             </div>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-950/60 text-orange-400 border border-orange-800">
@@ -428,7 +408,7 @@ export default function SensorsPage() {
           </div>
 
           <div className="mt-4 pt-3 border-t border-dark-border flex justify-between text-xs text-neutral-400 font-mono">
-            <span>Latest Reading: <strong className="text-orange-400">{telemetry?.temperature}°C</strong></span>
+            <span>Latest Reading: <strong className="text-orange-400">{telemetry?.temperature}Â°C</strong></span>
             <span>Feed Points: <strong className="text-neutral-300">{adafruitFeeds?.temperature?.length || 25}</strong></span>
           </div>
         </div>
@@ -476,7 +456,7 @@ export default function SensorsPage() {
           </div>
 
           <div className="mt-4 pt-3 border-t border-dark-border flex justify-between text-xs text-neutral-400 font-mono">
-            <span>Thermal Wall: <strong className="text-purple-400">{telemetry?.oppositeSideTemp}°C</strong></span>
+            <span>Thermal Wall: <strong className="text-purple-400">{telemetry?.oppositeSideTemp}Â°C</strong></span>
             <span>Gas PPM: <strong className={safety?.isSafeToCut ? 'text-emerald-400' : 'text-red-400'}>{telemetry?.oppositeSideGasPPM} PPM</strong></span>
           </div>
         </div>
@@ -638,6 +618,8 @@ void loop() {
     </div>
   );
 }
+
+
 
 
 

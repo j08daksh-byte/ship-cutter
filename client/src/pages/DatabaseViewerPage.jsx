@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import {
@@ -250,7 +250,7 @@ export default function DatabaseViewerPage() {
           <li>Create a free account at <strong className="text-white">mongodb.com/cloud/atlas</strong> and click "Create Cluster" (M0 Free).</li>
           <li>Under Database Access, create a database user and password.</li>
           <li>Under Network Access, add IP <code className="text-white bg-neutral-900 px-1 py-0.5 rounded">0.0.0.0/0</code> (Allow Access from Anywhere).</li>
-          <li>Click "Connect" → "Drivers" and copy the connection string:</li>
+          <li>Click "Connect" â†’ "Drivers" and copy the connection string:</li>
         </ol>
         <div className="p-2.5 rounded bg-black border border-neutral-800 text-[11px] font-mono text-cyan-300">
           MONGODB_URI=mongodb+srv://&lt;username&gt;:&lt;password&gt;@cluster0.xxxxx.mongodb.net/ship_cutting_robot?retryWrites=true&w=majority

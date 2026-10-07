@@ -5,17 +5,51 @@ import {
   Cpu, Thermometer, ChevronUp, ChevronDown, Video, 
   Settings, Terminal, Crosshair
 } from 'lucide-react';
+import { robofestAdapter } from '../services/robofestAdapter';
 
 export default function OperationsLivePage() {
-  const [engineState, setEngineState] = useState('CONNECTING'); // CONNECTING, ENGINE OFFLINE, READY FOR ROBOFEST ENGINE, LIVE
+  const [connectionState, setConnectionState] = useState('DISCONNECTED'); // DISCONNECTED, CONNECTING, CONNECTED, ERROR
+  const [engineState, setEngineState] = useState('OFFLINE'); // OFFLINE, READY FOR ROBOFEST ENGINE, LIVE
   const [bottomExpanded, setBottomExpanded] = useState(false);
+  const [robotState, setRobotState] = useState(null);
+  const [safetyState, setSafetyState] = useState(null);
+  const [telemetry, setTelemetry] = useState(null);
+  const [events, setEvents] = useState(() => [
+    { timestamp: new Date(), message: 'Shell initialized. Awaiting engine mount.', type: 'sys' }
+  ]);
 
-  // Simulate initial connection to bridge/engine
+  // Connect to RoboFest Integration Adapter
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setEngineState('READY FOR ROBOFEST ENGINE');
-    }, 1500);
-    return () => clearTimeout(timer);
+    robofestAdapter.connect();
+
+    const unsubscribe = robofestAdapter.subscribe((event) => {
+      switch (event.type) {
+        case 'CONNECTION_STATE':
+          setConnectionState(event.payload);
+          if (event.payload === 'CONNECTED') setEngineState('READY FOR ROBOFEST ENGINE');
+          else if (event.payload === 'ERROR') setEngineState('OFFLINE');
+          break;
+        case 'ROBOT_STATE':
+          setRobotState(event.payload);
+          break;
+        case 'SAFETY_STATE':
+          setSafetyState(event.payload);
+          break;
+        case 'TELEMETRY':
+          setTelemetry(event.payload);
+          break;
+        case 'EVENT':
+          setEvents(prev => [event.payload, ...prev].slice(0, 50));
+          break;
+        default:
+          break;
+      }
+    });
+
+    return () => {
+      unsubscribe();
+      robofestAdapter.disconnect();
+    };
   }, []);
 
   return (
@@ -35,9 +69,13 @@ export default function OperationsLivePage() {
         
         <div className="flex items-center gap-4 text-xs font-mono">
           <div className="flex items-center gap-2 border border-neutral-800 px-3 py-1 rounded bg-neutral-900">
-            <span className="text-neutral-500">ENGINE STATUS:</span>
-            <span className={`font-bold ${engineState === 'READY FOR ROBOFEST ENGINE' ? 'text-emerald-400' : engineState === 'CONNECTING' ? 'text-yellow-400 animate-pulse' : 'text-neutral-400'}`}>
-              {engineState}
+            <span className="text-neutral-500">ADAPTER LINK:</span>
+            <span className={`font-bold ${
+              connectionState === 'CONNECTED' ? 'text-emerald-400' : 
+              connectionState === 'CONNECTING' ? 'text-yellow-400 animate-pulse' : 
+              'text-red-400'
+            }`}>
+              {connectionState}
             </span>
           </div>
           <button className="bg-red-950/40 text-red-400 border border-red-900/50 hover:bg-red-900/80 px-3 py-1 rounded flex items-center gap-2 transition-colors">
@@ -61,17 +99,22 @@ export default function OperationsLivePage() {
             </h2>
             <p className="text-neutral-500 max-w-md font-mono text-sm">
               The RoboFest WebGL Engine will be mounted here. 
-              Currently waiting for integration phase.
+              Currently waiting for Phase 4 monorepo extraction.
             </p>
             {engineState === 'READY FOR ROBOFEST ENGINE' && (
               <div className="mt-8 border border-emerald-900 bg-emerald-950/20 text-emerald-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                SHELL READY
+                SHELL READY - WAITING FOR TWIN BUNDLE
+              </div>
+            )}
+            {connectionState === 'ERROR' && (
+              <div className="mt-8 border border-red-900 bg-red-950/20 text-red-400 px-4 py-2 rounded text-xs font-mono flex items-center gap-2">
+                ROBOFEST OPERATIONAL ENGINE OFFLINE
               </div>
             )}
           </div>
           
-          {/* Workspace Overlays (Camera, View Controls) */}
+          {/* Workspace Overlays */}
           <div className="absolute top-4 left-4 flex gap-2">
             <button className="bg-black/50 border border-neutral-800 text-neutral-400 p-2 rounded backdrop-blur hover:text-white">
               <Video className="w-4 h-4" />
@@ -99,9 +142,11 @@ export default function OperationsLivePage() {
               </h4>
               <div className="bg-black border border-neutral-800 rounded p-3 grid grid-cols-2 gap-2 text-xs font-mono">
                 <div className="text-neutral-500">MODE</div>
-                <div className="text-right text-yellow-500">STANDBY</div>
+                <div className={`text-right ${robotState?.mode ? 'text-emerald-400' : 'text-neutral-600'}`}>
+                  {robotState?.mode || 'UNAVAILABLE'}
+                </div>
                 <div className="text-neutral-500">TARGET</div>
-                <div className="text-right text-neutral-300">N/A</div>
+                <div className="text-right text-neutral-600">{robotState?.target || 'N/A'}</div>
               </div>
             </div>
 
@@ -113,7 +158,7 @@ export default function OperationsLivePage() {
               <div className="bg-black border border-neutral-800 rounded p-3 text-xs font-mono">
                 <div className="flex justify-between mb-2">
                   <span className="text-neutral-500">ACTIVE PLAN</span>
-                  <span className="text-neutral-300">NONE</span>
+                  <span className="text-neutral-600">UNAVAILABLE</span>
                 </div>
                 <div className="w-full bg-neutral-900 h-1.5 rounded overflow-hidden">
                   <div className="bg-cyan-500 h-full w-0"></div>
@@ -131,25 +176,25 @@ export default function OperationsLivePage() {
                   <div className="flex items-center gap-2 text-neutral-400">
                     <Wifi className="w-3.5 h-3.5" /> LINK
                   </div>
-                  <span className="text-neutral-600">-- dBm</span>
+                  <span className="text-neutral-600">{telemetry?.link || '--'} dBm</span>
                 </div>
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
                     <Battery className="w-3.5 h-3.5" /> POWER
                   </div>
-                  <span className="text-neutral-600">-- V</span>
+                  <span className="text-neutral-600">{telemetry?.power || '--'} V</span>
                 </div>
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
                     <Thermometer className="w-3.5 h-3.5" /> TEMP
                   </div>
-                  <span className="text-neutral-600">-- °C</span>
+                  <span className="text-neutral-600">{telemetry?.temp || '--'} °C</span>
                 </div>
                 <div className="bg-black border border-neutral-800 rounded p-2.5 flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2 text-neutral-400">
                     <Cpu className="w-3.5 h-3.5" /> COMPUTE
                   </div>
-                  <span className="text-neutral-600">-- %</span>
+                  <span className="text-neutral-600">{telemetry?.cpu || '--'} %</span>
                 </div>
               </div>
             </div>
@@ -166,7 +211,7 @@ export default function OperationsLivePage() {
         >
           <div className="flex items-center gap-3 text-xs font-mono">
             <span className="text-neutral-500">LATEST EVENT:</span>
-            <span className="text-neutral-300">Shell initialized. Awaiting engine mount.</span>
+            <span className="text-neutral-300">{events[0]?.message || 'No events'}</span>
           </div>
           <button className="text-neutral-500 hover:text-white">
             {bottomExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
@@ -175,9 +220,11 @@ export default function OperationsLivePage() {
         
         {bottomExpanded && (
           <div className="flex-1 p-4 overflow-y-auto bg-black font-mono text-xs">
-            <div className="text-neutral-600">[SYS] Operations shell loaded successfully.</div>
-            <div className="text-neutral-600">[SYS] Layout manager active.</div>
-            <div className="text-emerald-700">[NET] Shell ready for RoboFest integration.</div>
+            {events.map((ev, i) => (
+              <div key={i} className={`mb-1 ${ev.type === 'error' ? 'text-red-500' : ev.type === 'net' ? 'text-emerald-500' : 'text-neutral-500'}`}>
+                [{ev.timestamp.toLocaleTimeString()}] {ev.message}
+              </div>
+            ))}
           </div>
         )}
       </footer>
@@ -185,3 +232,4 @@ export default function OperationsLivePage() {
     </div>
   );
 }
+
