@@ -1,6 +1,8 @@
 ﻿import React, { useState } from 'react';
 import { 
-  Activity, ArrowLeft, ShieldAlert, Wifi, \r?\n  ChevronUp, ChevronDown, Video, \r?\n  Settings, Crosshair, ArrowUp, ArrowDown, ArrowRight, Link2Off
+  Activity, ArrowLeft, ShieldAlert, Wifi, 
+  ChevronUp, ChevronDown, Video, 
+  Settings, Crosshair, ArrowUp, ArrowDown, ArrowRight, Link2Off
 } from 'lucide-react';
 import { TwinProvider, DigitalTwin as SharedDigitalTwin } from '@titan/digital-twin';
 import useGatewayStream from '../hooks/useGatewayStream';
