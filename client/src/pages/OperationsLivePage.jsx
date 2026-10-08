@@ -155,7 +155,7 @@ export default function OperationsLivePage() {
           </div>
           
           <div className="flex-1 w-full h-full relative">
-            <TwinProvider state={twinState}>
+            <TwinProvider state={twinState} assetBaseUrl="/twin-assets">
                <SharedDigitalTwin />
             </TwinProvider>
           </div>
