@@ -7,7 +7,7 @@
  */
 
 // We will point to the Senior Server API (which will proxy to RoboFest)
-const SENIOR_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const SENIOR_API_URL = import.meta.env.VITE_API_URL || '/api';
 
 class RoboFestAdapter {
   constructor() {
