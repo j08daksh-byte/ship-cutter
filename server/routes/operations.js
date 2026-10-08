@@ -1,4 +1,4 @@
-import express from 'express';
+﻿import express from 'express';
 import CuttingOperation from '../models/CuttingOperation.js';
 import { defaultOperation } from '../config/seedData.js';
 import mongoose from 'mongoose';
@@ -116,29 +116,66 @@ router.get('/stream', async (req, res) => {
 
 // Proxy helper for Commands
 async function proxyCommand(urlPath, method, payload, res) {
-  const roboFestUrl = process.env.ROBOFEST_URL || 'http://localhost:3000';
+  const roboFestUrl = process.env.ROBOFEST_URL || "http://localhost:3000";
   const token = await getRoboFestToken();
 
   if (!token) {
-    return res.status(500).json({ status: 'ERROR', reason: 'Failed to acquire service token' });
+    return res.status(500).json({ status: "ERROR", reason: "Failed to acquire service token" });
   }
 
   try {
-    const upstreamRes = await fetch(`${roboFestUrl}${urlPath}`, {
+    const fetchOptions = {
       method,
       headers: {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      }
+    };
+    if (method !== "GET" && method !== "HEAD" && payload) {
+      fetchOptions.body = JSON.stringify(payload);
+    }
+
+    const upstreamRes = await fetch(`${roboFestUrl}${urlPath}`, fetchOptions);
     
     const data = await upstreamRes.json();
     return res.status(upstreamRes.status).json(data);
   } catch (error) {
-    return res.status(502).json({ status: 'ERROR', reason: 'Upstream gateway unreachable' });
+    return res.status(502).json({ status: "ERROR", reason: "Upstream gateway unreachable" });
   }
 }
+
+// GET /api/operations/missions
+router.get("/missions", async (req, res) => {
+  await proxyCommand("/api/missions", "GET", null, res);
+});
+
+// POST /api/operations/missions
+router.post("/missions", async (req, res) => {
+  const { shipName, objective, hullSection } = req.body;
+  if (!shipName || !objective || !hullSection) {
+    return res.status(400).json({ error: "Missing required mission fields: shipName, objective, hullSection" });
+  }
+  await proxyCommand("/api/missions", "POST", { shipName, objective, hullSection }, res);
+});
+
+// GET /api/operations/missions/:id/cuts
+router.get("/missions/:id/cuts", async (req, res) => {
+  await proxyCommand(`/api/missions/${req.params.id}/cuts`, "GET", null, res);
+});
+
+// POST /api/operations/missions/:id/cuts
+router.post("/missions/:id/cuts", async (req, res) => {
+  const { name, type } = req.body;
+  if (!name || !type) {
+    return res.status(400).json({ error: "Missing required cut fields: name, type" });
+  }
+  await proxyCommand(`/api/missions/${req.params.id}/cuts`, "POST", { name, type }, res);
+});
+
+// GET /api/operations/missions/:id
+router.get("/missions/:id", async (req, res) => {
+  await proxyCommand(`/api/missions/${req.params.id}`, "GET", null, res);
+});
 
 // POST /api/operations/command/robot
 router.post('/command/robot', async (req, res) => {
