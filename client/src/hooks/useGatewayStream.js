@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
 
 // A mock of the gateway data structure for now replaced with REAL SSE integration
 const useGatewayStream = () => {
@@ -134,9 +134,7 @@ const useGatewayStream = () => {
           else if (rtEvent.type === 'EVENT_CREATED') {
             setEvents(prev => [rtEvent.payload, ...prev].slice(0, 50));
           }
-        } catch (e) {
-          // parse error, ignore safely
-        }
+        } catch (e) { console.debug("Parse error", e); }
       };
 
       // Handle ping event. In EventSource, ping comments (:\n\n) don't trigger events.
