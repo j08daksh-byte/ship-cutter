@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import { Menu, Wifi, Ship, User, ShieldAlert, Cpu } from 'lucide-react';
@@ -63,14 +63,7 @@ export default function DashboardLayout() {
             </div>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <button
-              className="flex items-center gap-2 py-1.5 px-4 rounded bg-red-950 border border-red-900 hover:bg-red-900 text-red-500 hover:text-white font-bold tracking-widest text-xs uppercase transition-colors"
-              onClick={() => console.warn('NOT CONNECTED TO COMMAND GATEWAY: Global E-STOP')}
-              title="NOT CONNECTED TO COMMAND GATEWAY"
-            >
-              <ShieldAlert className="w-4 h-4" />
-              GLOBAL E-STOP
-            </button>
+            
             <div className="hidden md:flex items-center gap-2 bg-neutral-900 px-3 py-1.5 rounded-lg border border-dark-border text-xs text-neutral-300">
               <Ship className="w-3.5 h-3.5 text-neutral-500" />
               <span className="font-semibold text-neutral-400 uppercase tracking-wide">NO ACTIVE PROJECT</span>

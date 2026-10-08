@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import useGatewayStream from '../hooks/useGatewayStream';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
 } from 'chart.js';
-import { Activity, Flame, Thermometer, Battery, Radio, AlertTriangle, Wind, Droplets, CloudFog } from 'lucide-react';
+import { Activity, Flame, Thermometer, Battery, Wind } from 'lucide-react';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -49,7 +49,7 @@ const SensorCard = ({ label, value, unit, status = 'NORMAL', sourceMode = 'NOT C
 };
 
 export default function SensorsPage() {
-  const { connectionState, classification, telemetry, safety, events } = useGatewayStream();
+  const { connectionState, classification, telemetry } = useGatewayStream();
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function SensorsPage() {
         return next;
       });
     }
-  }, [telemetry?.raw]);
+  }, [telemetry]);
 
   const timeLabels = history.map((_, i) => i.toString());
 

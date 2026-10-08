@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Crosshair, Plus, Play, Pause, Square, AlertTriangle, CheckCircle2, Save } from 'lucide-react';
 
 export default function MissionsPage() {
@@ -342,7 +342,7 @@ export default function MissionsPage() {
 
                 <div className="space-y-6">
                   <div className="bg-neutral-900/50 border border-neutral-800 rounded p-5">
-                    <h3 className="text-sm font-bold tracking-widest text-neutral-400 mb-4 border-b border-neutral-800 pb-2">EXECUTION METRICS</h3>
+                    <h3 className="text-sm font-bold tracking-widest text-neutral-400 mb-4 border-b border-neutral-800 pb-2">EXECUTION METRICS (SIMULATED)</h3>
                     <div className="space-y-4 font-mono text-xs">
                       <div className="flex justify-between">
                         <span className="text-neutral-500">PROGRESS</span>

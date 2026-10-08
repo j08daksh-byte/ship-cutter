@@ -1,9 +1,6 @@
-﻿import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+﻿import React, { useState } from 'react';
 import { 
-  Activity, ArrowLeft, ShieldAlert, Wifi, Battery, 
-  Cpu, Thermometer, ChevronUp, ChevronDown, Video, 
-  Settings, Terminal, Crosshair, ArrowUp, ArrowDown, ArrowRight, Link2Off, Navigation
+  Activity, ArrowLeft, ShieldAlert, Wifi, \r?\n  ChevronUp, ChevronDown, Video, \r?\n  Settings, Crosshair, ArrowUp, ArrowDown, ArrowRight, Link2Off
 } from 'lucide-react';
 import { TwinProvider, DigitalTwin as SharedDigitalTwin } from '@titan/digital-twin';
 import useGatewayStream from '../hooks/useGatewayStream';
@@ -31,7 +28,7 @@ const LiveSensorCard = ({ label, value, unit, status = 'NORMAL', sourceMode = 'N
 };
 
 export default function OperationsLivePage() {
-  const { connectionState, classification, twinState, setTwinState, robotState, telemetry, safety, mission, events } = useGatewayStream();
+  const { connectionState, classification, twinState, setTwinState, telemetry, safety, mission, events } = useGatewayStream();
   
   const [bottomExpanded, setBottomExpanded] = useState(true);
   const [activeTab, setActiveTab] = useState('controls');
