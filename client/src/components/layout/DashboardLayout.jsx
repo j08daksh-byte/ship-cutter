@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import { Menu, Wifi, Ship, User, ShieldAlert } from 'lucide-react';
+import { Menu, Wifi, Ship, User, ShieldAlert, Cpu } from 'lucide-react';
 
 export default function DashboardLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function DashboardLayout() {
     <div className="min-h-screen bg-black text-white flex">
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        <header className="h-16 bg-dark-card/90 backdrop-blur-md border-b border-dark-border px-4 sm:px-6 flex items-center justify-between z-30">
+        <header className="h-16 bg-dark-card/90 backdrop-blur-md border-b border-dark-border px-4 sm:px-6 flex items-center justify-between z-30 shrink-0">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSidebarOpen(true)}
@@ -64,19 +64,20 @@ export default function DashboardLayout() {
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
             <button
-              className="flex items-center gap-2 py-1.5 px-4 rounded bg-red-600 hover:bg-red-500 text-white font-bold tracking-widest text-xs uppercase shadow-[0_0_15px_rgba(220,38,38,0.5)] transition-all"
-              onClick={() => alert('Global E-Stop Triggered (Placeholder)')}
+              className="flex items-center gap-2 py-1.5 px-4 rounded bg-red-950 border border-red-900 hover:bg-red-900 text-red-500 hover:text-white font-bold tracking-widest text-xs uppercase transition-colors"
+              onClick={() => console.warn('NOT CONNECTED TO COMMAND GATEWAY: Global E-STOP')}
+              title="NOT CONNECTED TO COMMAND GATEWAY"
             >
               <ShieldAlert className="w-4 h-4" />
-              E-STOP
+              GLOBAL E-STOP
             </button>
             <div className="hidden md:flex items-center gap-2 bg-neutral-900 px-3 py-1.5 rounded-lg border border-dark-border text-xs text-neutral-300">
-              <Ship className="w-3.5 h-3.5 text-accent-cyan" />
-              <span className="font-semibold text-white">MV Ocean Voyager</span>
+              <Ship className="w-3.5 h-3.5 text-neutral-500" />
+              <span className="font-semibold text-neutral-400 uppercase tracking-wide">NO ACTIVE PROJECT</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-400 bg-neutral-900/60 px-2.5 py-1.5 rounded-lg border border-dark-border">
-              <Wifi className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="font-mono text-[11px] text-emerald-400 hidden sm:inline">99.8%</span>
+            <div className="flex items-center gap-2 text-xs text-neutral-500 bg-neutral-900/60 px-2.5 py-1.5 rounded-lg border border-dark-border">
+              <Cpu className="w-3.5 h-3.5" />
+              <span className="font-mono text-[11px] hidden sm:inline uppercase">UNIT UNASSIGNED</span>
             </div>
             <div className="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-xs font-mono text-neutral-300">
               <User className="w-4 h-4" />

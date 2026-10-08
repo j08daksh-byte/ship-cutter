@@ -84,13 +84,10 @@ export default function Sidebar({ isOpen, onClose }) {
 
         <div className="p-4 mx-3 my-3 rounded-lg bg-neutral-900/90 border border-dark-border">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[11px] font-mono text-neutral-400 uppercase">Unit Alpha-01</span>
-            <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400 font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-              ACTIVE
-            </span>
+            <span className="text-[11px] font-mono text-neutral-500 uppercase">NOT ASSIGNED</span>
+            <span className="inline-flex items-center gap-1 text-[10px] text-neutral-500 font-mono"><span className="w-1.5 h-1.5 rounded-full bg-neutral-600"></span>NOT CONNECTED</span>
           </div>
-          <div className="text-xs font-semibold text-white truncate">MV Ocean Voyager</div>
+          <div className="text-xs font-semibold text-neutral-400 truncate">NO ACTIVE PROJECT</div>
         </div>
 
         <nav className="flex-1 px-3 py-2 space-y-4 overflow-y-auto">
@@ -133,3 +130,6 @@ export default function Sidebar({ isOpen, onClose }) {
     </>
   );
 }
+
+
+

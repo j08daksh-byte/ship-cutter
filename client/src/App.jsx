@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import PublicLayout from './components/layout/PublicLayout';
@@ -23,6 +23,7 @@ import SensorsPage from './pages/SensorsPage';
 import DatabaseViewerPage from './pages/DatabaseViewerPage';
 import OperationsLivePage from './pages/OperationsLivePage';
 import PlaceholderPage from './pages/PlaceholderPage';
+import MissionsPage from './pages/MissionsPage';
 
 export default function App() {
   return (
@@ -38,7 +39,7 @@ export default function App() {
 
           <Route element={<DashboardLayout />}>
             <Route path="/operations/live" element={<OperationsLivePage />} />
-            <Route path="/operations/missions" element={<PlaceholderPage title="Missions" />} />
+            <Route path="/operations/missions" element={<MissionsPage />} />
             <Route path="/operations/sensors" element={<SensorsPage />} />
             <Route path="/ships" element={<ShipsPage />} />
             <Route path="/materials" element={<MaterialPage />} />
@@ -61,3 +62,4 @@ export default function App() {
     </ErrorBoundary>
   );
 }
+
